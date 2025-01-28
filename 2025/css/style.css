@@ -1,0 +1,138 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/春节.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.countdown div {
+  margin: 0 10px;
+}
+
+.countdown span:first-child {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.instruction {
+  font-size: 1.2rem;
+  animation: pulse 2s infinite;
+}
+
+.share-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 100;
+}
+
+.memory-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.firework {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.petal {
+  position: absolute;
+  font-size: 20px;
+  animation: falling linear infinite;
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
